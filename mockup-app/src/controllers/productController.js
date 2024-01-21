@@ -63,3 +63,11 @@ const deleteItem = (req, res) => {
     data.setItems([...filteredArray]);
     res.json({message: data.items})
 }
+
+module.exports = {
+    getAllItems,
+    getItem,
+    createNewItem,
+    updateItem,
+    deleteItem
+}
