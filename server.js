@@ -91,7 +91,7 @@ app.delete('/product/:id', async(req, res) => {
 
 // Connnect databased : MongoDB
 // Setup the routes
-mongoose.set("strictQuery", false);
+// mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://admin:admin-node-dev@fillnode-api.jji1szs.mongodb.net/Node-API?retryWrites=true&w=majority')
 .then(() => {
     console.log('Connneted to MongoDB . . .')
