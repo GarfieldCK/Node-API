@@ -8,20 +8,25 @@
  * Step 6 : Connect to dabased with async and await
  * Step 7 : Fetch and get data from databased
  * Step 8 : Update data in databased
+ * Step 9 : Apply MVC pattern to the design
+ * Step 10 : Setup authentication using Basic auth, OAuth, Token auth
  */
 
 const express = require('express');
 const app = express();
 const { logger } = require('./src/middleware/logEvents');
+const { authenticated } = require('./src/middleware/basicAuthentication');
 const PORT = process.env.PORT || 3500;
 
 // Custom middleware logger
 app.use(logger);
-
 app.use(express.json());
 
+// Basic HTTP authenticate middleware:
+app.use(authenticated);
+
 //routes
-// app.use('/', require('./src/routes/root'));
 app.use('/items', require('./src/routes/api/products'));
 
+// Run the server
 app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));
