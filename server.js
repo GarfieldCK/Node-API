@@ -15,11 +15,12 @@ const app = express();
 const mongoose = require("mongoose");
 const Product = require("./models/productModel")
 
-// Routes
-
+// Middle ware
 app.use(express.json());
 app.use(express.urlencoded({extended : false}))
 
+
+// API Interaction
 app.get('/', (request, response) => {
     response.send('Hello Node API')
 });
@@ -89,6 +90,7 @@ app.delete('/product/:id', async(req, res) => {
 })
 
 // Connnect databased : MongoDB
+// Setup the routes
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://admin:admin-node-dev@fillnode-api.jji1szs.mongodb.net/Node-API?retryWrites=true&w=majority')
 .then(() => {
