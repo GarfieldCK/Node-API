@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "oil",
+        "quantity" : "2",
+        "price": "10",
+        "image" : "https://images.pexels.com/photos/6690916/pexels-photo-6690916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "2",
+        "name": "shampoo",
+        "quantity" : "5",
+        "price": "20",
+        "image" : "https://images.pexels.com/photos/6690916/pexels-photo-6690916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id": "3",
+        "name": "toy",
+        "quantity" : "10",
+        "price": "2",
+        "image" : "https://images.pexels.com/photos/6690916/pexels-photo-6690916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+]
