@@ -12,6 +12,7 @@
 
 const express = require('express');
 const app = express();
+const { logger } = require('./src/middleware/logEvents');
 const PORT = process.env.PORT || 3500;
 
 // Custom middleware logger
@@ -20,7 +21,7 @@ app.use(logger);
 app.use(express.json());
 
 //routes
-app.use('/', require('./src/routes/root'));
+// app.use('/', require('./src/routes/root'));
 app.use('/items', require('./src/routes/api/products'));
 
 app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));

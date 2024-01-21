@@ -11,4 +11,4 @@ router.route('/')
 router.route('/:id')
     .get(itemsController.getItem);
 
-module.exports = router;
+module.exports = router ;
